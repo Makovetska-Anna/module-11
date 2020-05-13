@@ -1,0 +1,24 @@
+.end-body__btn{
+	@extend %null;
+	width: 151px;
+	height: 42px;
+	background-color: $decorative-color;
+	text-align: center;
+	@include fonts($ff-Mo, normal, 700, 14px, 1.2, $secoundary-color);
+	cursor: pointer;
+
+}
+.email-window{
+	@extend %null;
+	width: 220px;
+	height: 40px;
+	border: 1px solid $before-color;
+  @include fonts($ff-Ro, italic, 300, 15px, 1.2, $email-color);
+	padding-left: 10px;
+	outline: 0;
+}
+
+.end-body__form{
+	
+	display: flex;
+}

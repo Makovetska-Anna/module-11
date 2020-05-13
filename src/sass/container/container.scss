@@ -1,0 +1,91 @@
+
+$main-color: #000000;
+$secoundary-color: #ffffff;
+$hover-color: #fce38a;
+$after-color: #f38181;
+$text-color: #999999;
+$decorative-color: #95e1d3;
+$name-color: #333333;
+$before-color: #e5e5e5;
+$citate-color: #595959;
+$email-color: #cccccc;
+$gradient-color1:rgba(252,227,138,0.9);
+$gradient-color2:rgba(243,129,129,0.9);
+$gradient-photo1:rgba(252,227,138,0);
+$gradient-photo2:rgba(243,129,129,0);
+
+$ff-Mo: "Montserrat";
+$ff-KS: "Kaushan Script";
+$ff-Ro: "Roboto";
+
+
+%null{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+%nullauto{
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+}
+%animation{
+	transition-duration: 200ms;
+	transition-timing-function: linear;
+}
+@mixin fonts ($ff, $fs, $fw, $fz, $lh, $color){
+	font-family: $ff;
+	font-style: $fs;
+	font-weight: $fw;
+	font-size: $fz;
+	line-height: $lh;
+	color: $color;
+
+}
+
+.conteiner{
+	width: 1200px;
+  @extend %nullauto;
+	height: 100%;
+
+	&__supratitle{
+		@extend %null;
+		@include fonts($ff-KS,normal,400,72px,1.5,$secoundary-color);
+		text-align: center;
+		margin-top: 180px;
+	}
+
+	&__title{
+		@extend %nullauto;
+		width: 845px;
+		text-align: center;
+		margin-top: 40px;
+		@include fonts($ff-Mo, normal, 700, 150px, 1, $secoundary-color)
+	}
+  &__btn{
+		@extend %nullauto;
+		cursor: pointer;
+		display: block;
+		width: 160px;
+		height: 40px;
+		background-color: transparent;
+		border: 3px solid $secoundary-color;
+		margin-top: 125px;
+		@include fonts($ff-Mo, normal, 700, 14px, 1.5, $secoundary-color)
+	}
+}
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden{
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0px;
+padding: 0px;
+white-space: nowrap;
+-webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}

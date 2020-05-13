@@ -1,0 +1,55 @@
+.team{
+	margin-top: 90px;
+}
+.team-menu{
+	list-style: none;
+	display: flex;
+  @extend %null;
+	margin-top: 90px;
+	justify-content: space-between;
+
+}
+.team-menu__name{
+	margin-top: 31px;
+  @include fonts($ff-Mo, normal, 400, 14px, 1.2, $name-color);
+	text-align: center;
+}
+.team-menu__job{
+	@extend %null;
+  @include fonts($ff-Ro, italic, 300, 15px, 1.2, $text-color);
+	text-align: center;
+}
+.team__text{
+	@extend %null;
+  @include fonts($ff-Ro, normal, 400, 15px, 1.2, $text-color);
+	margin-top: 57px;
+	text-align: center;
+}
+.team-menu__photo{
+	display: flex;
+
+	&:hover .team-menu__picture{
+		box-shadow: 10px 10px $decorative-color;
+		@extend %animation;
+		transform: translate(-10px, -10px);
+}
+}
+.team-menu__background{
+	background: linear-gradient( to top, $gradient-photo1, $gradient-photo2 );
+	width: 380px;
+	height: 470px;
+	position: absolute;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.team-menu__photo--hover:hover .team-menu__background{
+	background: linear-gradient( to top, $gradient-color1, $gradient-color2);
+	@extend %animation;
+	transform: translate(-10px, -10px);
+}
+.team-menu__photo--hover:hover .society__item{
+	opacity: 1;
+	@extend %animation;
+}

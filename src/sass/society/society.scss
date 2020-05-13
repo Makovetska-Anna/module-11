@@ -1,0 +1,26 @@
+.society__icon{
+	@extend %null;
+	width: 56px;
+	height: 56px;
+	cursor: pointer;
+	fill: $after-color;
+	background-color: $hover-color;
+	&:hover{
+		background-color: $after-color;
+		fill: $secoundary-color;
+		@extend %animation;
+	}
+}
+.society{
+	@extend %nullauto;
+	list-style: none;
+	display: flex;
+}
+.society__item{
+	opacity: 0;
+	height: 56px;
+
+ &:not(:last-child){
+		border-right: 1px solid $after-color;
+	}
+}
